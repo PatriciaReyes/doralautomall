@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <title>Doral Auto Mall</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Doral Auto Mall">
+    
+    <link rel="shortcut icon" href="assets/img/icon/wheel.png">
+
+    <!-- CCS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+    {% block style %}
+      <style>
+        /* FONT */
+        @font-face {
+          font-family: myFont;
+          src: url('assets/fonts/ERASDEMI.TTF');
+        }
+        /* BODY */
+        body {
+          padding-top: 70px;
+          /*background-color: #EEEEEE;*/
+        }
+        /* PAGE TITLE */
+        .navbar-brand {
+          color:#D80D0D;
+          font-family: myFont;
+          font-size:1.5625em; /* 25px/16=1.5625em */
+        }
+        /* HEADER */
+        .jumbotron {
+          padding-bottom: 10px;
+          padding-top: 10px;
+        }
+        #header_title {
+          color:#FFFFFF;
+        }
+
+        /* JUMBOTRON */
+        #logo_jumbo{
+          width:95%;
+        }
+        
+        #title_jumbo {
+          text-align: center;
+          color:#D80D0D;
+          font-family: myFont;
+          font-weight:bold;
+          
+        }
+        #desc_jumbo {
+          text-align: center;
+        }
+        #phone_jumbo {
+          padding-top: 30px;
+          font-size:1em; /* 15px/16=0.9375em */
+          text-align: center;
+        }
+        .page_title{
+          text-align: center;
+          font-family: myFont;
+          color:#D80D0D;
+        }
+        /* FOOTER */
+        footer{
+          padding-top: 10px;
+          font-size: 12px;
+          text-align: center;
+          color: #575757;
+        }
+        /* LINKS */
+        a {color:#D80D0D;}
+        a:hover {color:#A10808;}
+        .container-narrow {
+    background: url(assets/img/fondo.png) repeat 0 0;
+}
+      </style>   
+    {% endblock %}
+  
+  </head>
+  
+  <body>
+    <!-- WEBSITE's HEADER -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          {% block header %}
+            <a id="header_title" class="navbar-brand disabled">Doral Auto Mall</a>
+          {% endblock %}
+        </div>
+        {% block navbar %}
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li {% if moption == '' %} class="active" {% endif %}><a href="/doralautomall">Home</a></li>
+              <li {% if moption == 'find' %} class="active" {% endif %}><a href="find">Inventory</a></li>
+              <li {% if moption == 'financing' %} class="active" {% endif %}><a href="financing">Financing</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li {% if moption == 'about' %} class="active" {% endif %}><a href="about">About</a></li>
+              <li {% if moption == 'location' %} class="active" {% endif %}><a href="location">Location</a></li>
+              <li {% if moption == 'contact' %} class="active" {% endif %}><a href="contact">Contact us</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        {% endblock %}
+      </div>
+    </div>
+    
+    <div class="container">
+    <div class="col-md-12"> 
+      <div class="row">
+        {% block container_header %}           
+          <!-- Main jumbotron for a primary marketing message or call to action -->
+          <div class="jumbotron">
+            <div class="row">
+              <div class="col-md-3">
+                <img id="logo_jumbo" class="img-responsive img-circle" alt="Responsive Logo" src="assets/img/empresa/doral-auto-mall-grande2.jpg"/>
+              </div>
+              <div class="col-md-6">
+                <h1 id="title_jumbo">Doral Auto Mall</h1>
+                <p id="desc_jumbo">Used Cars Dealership in Doral City</p>
+              </div>
+              <div id="phone_jumbo" class="col-md-3">
+                <p><address><strong>
+                  (305) 717-0009<br>
+                  (305) 717-6191
+                </strong></address></p>
+              </div>
+            </div>
+          </div>
+        {% endblock %}
+
+        {% block container %}
+        {% endblock %}
+      </div>
+    </div>
+    </div>
+
+    <!-- WEBSITE's fOOTER -->
+    <div class="navbar navbar-inverse navbar-fixed-bottom">
+      <div class="container">
+        {% block footer %}
+          <footer>
+            <p><small>
+              &copy; Copyright Doral Auto Mall 2013 
+              (WC3 <a href="http://validator.w3.org/check?uri=referer" onclick="window.open(this.href); return false;">XHTML</a>) 
+              <BR>All Rights Reserved - <a href="http://www.doral-auto-mall.com">www.doral-auto-mall.com</a>
+            </small></p>
+          </footer>
+        {% endblock %}  
+      </div>  
+    </div>
+
+    {% block js %}
+      <script src="//code.jquery.com/jquery.js"></script>
+      <script src="assets/js/bootstrap.min.js"></script>
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]-->
+        <script src="assets/js/html5shiv.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+      <!--[endif]-->
+      <script>
+        if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+          var msViewportStyle = document.createElement("style")
+          msViewportStyle.appendChild(
+            document.createTextNode(
+              "@-ms-viewport{width:auto!important}"
+            )
+          )
+          document.getElementsByTagName("head")[0].appendChild(msViewportStyle)
+        }
+
+        $.backstretch("assets/img/fondo.jpg");
+      </script>
+    {% endblock %}  
+  </body>
+
+</html>

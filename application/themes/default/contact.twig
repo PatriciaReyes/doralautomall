@@ -1,0 +1,72 @@
+{% extends _layout %}
+
+{% block navbar %}{% set moption = 'contact' %}{{ parent() }}{% endblock %}
+
+{% block style %}
+	{{ parent() }}
+
+	<style>
+    .contact-desc {
+    	text-align: center;
+    }
+  </style>
+{% endblock %}    
+
+{% block container %}
+		
+	<div class="row">
+    <h2 class="page_title">Contact us</h2>
+    
+    <!-- FORM -->
+    <div class="col-md-7">
+      <form action="/doralautomall/send_email" method="post" class="form-horizontal" role="form" id="send_email">
+			  <div class="form-group">
+			    <label for="name" class="col-md-5 control-label">Contact Name</label>
+			    <div class="col-md-7"><input type="text" class="form-control input-sm" id="name" placeholder="Enter name"></div>
+			  </div>
+			  <div class="form-group">
+			    <label for="phone" class="col-md-5 control-label">Phone Number</label>
+			    <div class="col-md-7"><input type="phone" class="form-control input-sm" id="phone" placeholder="Enter phone number. Example: 3057170009"></div>
+			  </div>
+			  <div class="form-group">
+			    <label for="email" class="col-md-5 control-label">Email address</label>
+			    <div class="col-md-7"><input type="email" class="form-control input-sm" id="email" placeholder="Enter email"></div>
+			  </div>
+			  <div class="form-group">
+			    <label for="comment" class="col-md-5 control-label">Comments</label>
+			    <div class="col-md-7"><textarea class="form-control input-sm" rows="2" id="comment" placeholder="Enter comments"></textarea></div>
+			  </div>
+			  <div class="form-group">
+			  	<div class="form-actions">
+			  		<div class="col-md-offset-5 col-md-7"><button type="submit" class="btn btn-danger btn-sm">Send email</button></div> 
+			  	</div>	 
+			  </div>
+			</form>
+    </div>
+
+    <!-- CONTACT US -->
+    <div class="col-md-offset-1 col-md-3 contact-desc">
+    	<address>
+			  <strong><i class="icon-book"></i> Phone numbers</strong><br>
+			  +1 (305) 717-0009<br>
+			  +1 (305) 717-6191<br>
+			</address>
+
+			<address>
+			  <strong><i class="icon-envelope"></i> Email</strong><br>
+			  <a href="mailto:doralautomall@gmail.com">doralautomall@gmail.com</a><br>
+			  <a href="mailto:info@doral-auto-mall.com">info@doral-auto-mall.com</a>
+			</address>
+			
+			<address>
+			  <strong><i class="icon-globe"></i> Websites</strong><br>
+			  <a href="http://www.doral-auto-mall.com">www.doral-auto-mall.com</a>
+			  <a href="http://www.doralautomall.net">www.doralautomall.net</a>
+			</address>
+			<br>
+		</div>
+
+    <div class="col-md-offset-1"></div>
+	</div>
+{% endblock %}
+

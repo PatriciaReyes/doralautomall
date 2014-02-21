@@ -1,0 +1,52 @@
+{% extends _layout %}
+
+{% block navbar %}{% set moption = '' %}{{ parent() }}{% endblock %}
+
+{% block style %}
+  {{ parent() }}
+  <style>
+    /* PAGE TITLE */
+    .navbar-brand {
+      font-family: myFont;
+    }
+
+    .services-desc {
+      text-align: center;
+    }
+    .services-title {
+      font-family: myFont;
+      color:#D80D0D;
+    }
+  </style>    
+{% endblock %}
+    
+{% block container %} 
+    <!-- Example row of columns -->
+    <div class="row services-desc">
+      <div class="col-md-offset-1 col-md-3">
+        <h2 class="services-title">Find a car</h2>
+        <p>Find the pre-owned car that fits your needs at the best price rate in market. 
+          <br>If it's not in our inventory, we will do our best to get it for you.</p>
+        <!--p><a class="btn  btn-danger" href="find">Find car &raquo;</a></p-->
+        <p><a class="btn  btn-danger" href="http://www.doralautomall.net/inventory.html" target="_blank">Find car &raquo;</a></p>
+      </div>
+      <div class="col-md-offset-1 col-md-3">
+        <h2 class="services-title">Financing</h2>
+        <p>Coming soon...</p>
+        <br><br><br>
+        <p><a class="btn  btn-danger" href="financing">View details &raquo;</a></p>
+     </div>
+      <div class="col-md-offset-1 col-md-3">
+        <h2 class="services-title">Location</h2>
+        <p>
+          <address>
+            1805 NW 97 Ave.<br>
+            Doral, FL 33172<br>
+          </address>
+        </p>
+        <br>
+        <p><a class="btn  btn-danger" href="location">View map &raquo;</a></p>
+      </div>
+    </div>
+{% endblock %}
+ 

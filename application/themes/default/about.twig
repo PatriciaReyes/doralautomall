@@ -1,0 +1,29 @@
+{% extends _layout %}
+
+{% block navbar %}{% set moption = 'about' %}{{ parent() }}{% endblock %}
+
+{% block style %}
+	{{ parent() }}
+	<style>
+		.about {
+			text-align: justify;
+		}
+	</style>
+{% endblock %}
+
+{% block container %}
+	<div class="row">
+		<h2 class="page_title">About us</h2>
+		<div class="col-md-offset-1 col-md-10">
+			<p class="about">
+				<strong>Doral Auto Mall</strong> is a fully licensed pre-owned cars dealership in Doral City, Florida, located just 15 minutes away from Miami International Airport and 5 minutes from Miami International Mall. We do our best to make your car buying experience as good and easy as it can be.
+				<br><br>
+				We have devoted ourselves to serve our customers to the best of our ability, providing them with quality used cars and trucks at a fair market price and helping them find the vehicle they are looking for. We have a wide variety of vehicles that have been previously checked and serviced.
+				<br><br>
+				Visit the <a href="contact"><strong>Contact us</strong></a> section if you have any questions or suggestions. Our staff will be happy to answer them in a short notice. We look forward to see you!
+			</p>	
+		</div>	
+	</div>	
+{% endblock %}
+
+

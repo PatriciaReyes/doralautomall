@@ -1,0 +1,27 @@
+{% extends _layout %}
+
+{% block style %}
+  {{ parent() }}
+  <style>
+    img {
+      border-radius:20px;
+      height:100%;
+      width: 100%;
+    }
+  </style>    
+{% endblock %}
+  
+{% block navbar %}
+{% endblock %}
+
+{% block container_header %}           
+{% endblock %}
+
+{% block container %}
+  <div class="row">          
+    <div id="wrapper" class="col-md-offset-3 col-md-6">
+      <img class="img-responsive" alt="Responsive image" src="assets/img/dam_construct.png"/>
+    </div>
+  </div>
+{% endblock %}
+ 

@@ -1,0 +1,76 @@
+{% extends _layout %}
+
+{% block navbar %}{% set moption = 'find' %}{{ parent() }}{% endblock %}
+
+{% block style %}
+  {{ parent() }}
+  <style>
+    .navbar-brand {
+      font-family: myFont;
+    }
+
+    .info {
+    	text-align: justify;
+    }
+  </style>    
+{% endblock %}
+    
+{% block container %} 
+    <div class="row">
+	    <h2 class="page_title">Find a car</h2>
+	    <div class="col-md-5">
+	    	<br><br>
+	    	<a class="btn btn-danger btn-lg btn-block" href="http://www.doralautomall.net/inventory.html" target="_blank">Find car &raquo;</a>
+	    	<!--form class="form-horizontal" role="form">
+				  <div class="form-group">
+				    <label for="make" class="col-md-5 control-label">Make</label>
+				    <div class="col-md-7">
+				    	<select class="form-control input-sm" id="make">
+							  <option>Any make</option>
+							</select>
+						</div>
+				  </div>
+				  <div class="form-group">
+				    <label for="model" class="col-md-5 control-label">Model</label>
+				    <div class="col-md-7">
+				    	<select class="form-control input-sm" id="model">
+							  <option>Any model</option>
+							</select>
+						</div>
+				  </div>
+				  <div class="form-group">
+				    <label for="year" class="col-md-5 control-label">Year</label>
+				    <div class="col-md-7">
+				    	<select class="form-control input-sm" id="year">
+							  <option>Any year</option>
+							</select>
+						</div>
+				  </div>
+				  <div class="form-group">
+				    <label for="mileage" class="col-md-5 control-label">Mileage</label>
+				    <div class="col-md-7">
+				    	<select class="form-control input-sm" id="mileage">
+							  <option>Any mileage</option>
+							</select>
+						</div>
+				  </div>
+				  <div class="form-group">
+				    <label for="price" class="col-md-5 control-label">Price</label>
+				    <div class="col-md-7">
+				    	<select class="form-control input-sm" id="price">
+							  <option>Any price</option>
+							</select>
+						</div>
+				  </div>
+				  <div class="form-group">
+			  	<div class="col-md-offset-5 col-md-7"><button type="submit" class="btn btn-danger btn-sm">Find your car</button></div>  
+			  </div>
+				</form-->
+	    </div>
+	    <div class="col-md-offset-2 col-md-4">
+	    	<br>
+	    	<div class="alert alert-danger info"><strong>Important!</strong><br>If you don't see the vehicle you're looking for in our inventory, just go to <a class="alert-link" href="contact">Contact us</a> and let us know. We will try to find the exact vehicle you're looking for and contact you.</div>
+	    </div>
+	</div>
+{% endblock %}
+
